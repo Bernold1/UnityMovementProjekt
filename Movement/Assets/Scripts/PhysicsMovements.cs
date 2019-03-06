@@ -55,6 +55,7 @@ namespace Assets.Scripts
             //i spillet i y-retningen med størrelsen af gravityModificaton pr. sekund. 
             velocity.x = targetVelocity.x;
 
+
             isGrounded = false;
 
             Vector2 deltaPosition = velocity * Time.deltaTime; //opretter en ny vector og Bestemmer hvor vores objekt vil være baseret efter bevægelsen fra tyngdekraften

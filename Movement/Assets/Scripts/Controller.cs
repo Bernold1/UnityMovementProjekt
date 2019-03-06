@@ -6,10 +6,11 @@ namespace Assets.Scripts
     {
         public float movementSpeed = 3;
         public float jumpSpeed = 7;
+        public BoxCollider2D[] boxColliders;
         // Start is called before the first frame update
         void Start()
         {
-
+            boxColliders = GetComponents<BoxCollider2D>();
         }
 
         protected override void ComputeVelociy()
@@ -32,6 +33,18 @@ namespace Assets.Scripts
             }
 
             targetVelocity = move * movementSpeed;
+            
         }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if(other.tag == "Enemy")
+            {
+               // Destroy(other.gameObject);
+            }
+            
+        }
+
     }
+
 }
