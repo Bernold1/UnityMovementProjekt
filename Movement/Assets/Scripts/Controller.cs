@@ -6,11 +6,22 @@ namespace Assets.Scripts
     {
         public float movementSpeed = 3;
         public float jumpSpeed = 7;
-        public BoxCollider2D[] boxColliders;
+        public Animator animator;
+
+
+        private SpriteRenderer spriteRenderer;
+
+
         // Start is called before the first frame update
-        void Start()
+        void Awake()
         {
-            boxColliders = GetComponents<BoxCollider2D>();
+            spriteRenderer = GetComponent<SpriteRenderer>();
+            animator = GetComponent<Animator>();
+        }
+
+        void Update()
+        {
+
         }
 
         protected override void ComputeVelociy()
@@ -31,20 +42,22 @@ namespace Assets.Scripts
                     velocity.y = velocity.y * 0.5f;
                 }
             }
-
-            targetVelocity = move * movementSpeed;
             
-        }
 
-        private void OnTriggerEnter2D(Collider2D other)
-        {
-            if(other.tag == "Enemy")
+            bool flip = (spriteRenderer.flipX ? (move.x > 0.01f) : (move.x < 0.01f));
+            if (flip)
             {
-               // Destroy(other.gameObject);
+                spriteRenderer.flipX = !spriteRenderer.flipX;
             }
-            
-        }
 
+            animator.SetFloat("Speed", Mathf.Abs(velocity.x) / movementSpeed);
+            targetVelocity = move * movementSpeed;
+
+        }
+        private void flip() { // Skal lige have lavet flip transformen om.
+                              }
     }
+
+
 
 }

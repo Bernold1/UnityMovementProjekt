@@ -2,9 +2,9 @@ fileFormatVersion: 2
 guid: e08c2f34d6b9bbf42a5290928b1eca82
 TextureImporter:
   fileIDToRecycleName:
-    21300000: iDLE16biT_0
-    21300002: iDLE16biT_1
-    21300004: iDLE16biT_2
+    21300000: Idle1
+    21300002: Idle2
+    21300004: Idle3
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -87,7 +87,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: iDLE16biT_0
+      name: Idle1
       rect:
         serializedVersion: 2
         x: 23
@@ -101,13 +101,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7791889c21a732549a42c4887ec1ead5
+      spriteID: 9b87ce50860e41842bde8cde3ded2e1d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: iDLE16biT_1
+      name: Idle2
       rect:
         serializedVersion: 2
         x: 117
@@ -121,13 +121,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9780b76553df6b408cf198a80f9ed89
+      spriteID: 037ded56427a3484c8edbb6e12e996f6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: iDLE16biT_2
+      name: Idle3
       rect:
         serializedVersion: 2
         x: 211
@@ -141,7 +141,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 762bd8e573b9df44e963ba73c7c0e400
+      spriteID: 3124837efde34b147a36b83fedd8fe18
       vertices: []
       indices: 
       edges: []
